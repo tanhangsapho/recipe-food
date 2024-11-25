@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Recipe Manage</h1>
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search recipes..."
+          />
+        </div>
+      </header>
+      <main class="grid">
+        <aside class="sidebar">
+          <h2>Categories</h2>
+          <ul class="category-list" id="categoryList"></ul>
+        </aside>
+
+        <section class="recipe-grid" id="recipeGrid"></section>
+      </main>
+    </div>
+    <div class="recipe-view-overlay" id="recipeViewOverlay">
+      <div class="recipe-view">
+        <div class="recipe-view-header">
+          <img
+            src=""
+            alt="Recipe"
+            class="recipe-view-image"
+            id="recipeViewImage"
+          />
+          <button class="close-button" id="closeRecipeView">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="recipe-view-content">
+          <h2 class="recipe-view-title" id="recipeViewTitle">Recipe Title</h2>
+          <div class="recipe-view-meta">
+            <div class="recipe-view-meta-item">
+              <i class="fas fa-clock"></i>
+              <span id="recipeViewTime">30 mins</span>
+            </div>
+            <div class="recipe-view-meta-item">
+              <i class="fas fa-user"></i>
+              <span id="recipeViewServings">4 servings</span>
+            </div>
+            <div class="recipe-view-meta-item">
+              <i class="fas fa-fire"></i>
+              <span id="recipeViewCalories">400 kcal</span>
+            </div>
+          </div>
+          <div class="recipe-sections">
+            <div class="recipe-section">
+              <h3 class="recipe-section-title">Ingredients</h3>
+              <ul class="ingredients-list" id="recipeViewIngredients"></ul>
+            </div>
+            <div class="recipe-section">
+              <h3 class="recipe-section-title">Instructions</h3>
+              <ol class="instructions-list" id="recipeViewInstructions"></ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
